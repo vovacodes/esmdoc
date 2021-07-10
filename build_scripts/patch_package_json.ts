@@ -7,7 +7,10 @@ packageJson.type = "module"
 delete packageJson.module
 
 // Add "exports" field: https://nodejs.org/api/packages.html#packages_exports
-packageJson.exports = "./esmdoc.js"
+packageJson.exports = {
+    ".": "./esmdoc.js",
+    "./esmdoc_bg.wasm": "./esmdoc_bg.wasm"
+}
 
 packageJson.files = [
     "esmdoc_bg.wasm",
